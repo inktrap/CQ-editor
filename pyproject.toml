@@ -12,6 +12,7 @@ dependencies = [
   "path",
   "logbook",
   "requests",
+  "qdarkstyle",
   "qtconsole>=5.5.1,<5.6.0"
 ]
 requires-python = ">=3.9,<3.13"

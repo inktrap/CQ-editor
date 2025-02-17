@@ -1,14 +1,17 @@
 import sys
+import os
 import argparse
+import qdarkstyle
 
 from PyQt5.QtWidgets import QApplication
+from .main_window import MainWindow
 
 NAME = "CQ-editor"
+os.environ['QT_API'] = 'pyqt5'
 
 # need to initialize QApp here, otherewise svg icons do not work on windows
 app = QApplication(sys.argv, applicationName=NAME)
-
-from .main_window import MainWindow
+app.setStyleSheet(qdarkstyle.load_stylesheet())
 
 
 def main():
